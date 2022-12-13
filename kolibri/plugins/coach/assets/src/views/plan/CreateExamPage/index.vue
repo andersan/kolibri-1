@@ -342,6 +342,10 @@
         return this.addableExercises.length === 0;
       },
       selectAllIndeterminate() {
+        console.log("selectAllIndeterminate. ")
+        console.log(this.selectAllChecked);
+        console.log(this.addableExercises.length !== this.allExercises.length);
+
         if (this.selectAllChecked) {
           return false;
         }
@@ -518,6 +522,10 @@
           if (everyExerciseSelected) {
             return false;
           }
+
+          // Chris - testing for indeterminate checkbox functionality
+          console.log("CHECK IF contentIsIndeterminate. " + content.exercises.some(exercise => Boolean(this.selectedExercises[exercise.id])));
+
           return content.exercises.some(exercise => Boolean(this.selectedExercises[exercise.id]));
         }
         return false;

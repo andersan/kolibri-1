@@ -66,6 +66,7 @@ const sumTotalResources = sumBy('total_resources');
 const sumOnDeviceResources = sumBy('on_device_resources');
 
 // Props shared with all partially-selected nodes
+// TODO: use this to implement indetermine checkbox elsewhere
 function partiallySelectedNode(node) {
   return {
     ...node,

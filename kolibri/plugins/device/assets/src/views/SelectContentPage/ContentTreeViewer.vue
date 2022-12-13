@@ -27,6 +27,7 @@
         </template>
         <template #tbody>
           <transition-group tag="tbody" name="list">
+            <!-- reference this indeterminate checkbox logic -->
             <ContentNodeRow
               v-for="cNode in showableAnnotatedChildNodes"
               :key="cNode.id"
